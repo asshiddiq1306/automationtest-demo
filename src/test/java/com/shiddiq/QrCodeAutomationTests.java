@@ -2,10 +2,10 @@ package com.shiddiq;
 
 import org.testng.annotations.Test;
 
-class QrCodeGeneratorTests extends BaseTest {
+class QrCodeAutomationTests extends BaseTest {
 
 	@Test(priority = 1)
-	public void userCanOpenHomePage(){
+	public void userCanOpenQrCodeGeneratorWebsite(){
 		if (this.individualRun){
 			WebUtil.navigateToUrl(GlobalConstants.QR_GENERATOR_URL);
 		}
@@ -41,7 +41,7 @@ class QrCodeGeneratorTests extends BaseTest {
 	}
 
 	@Test(priority = 4)
-	public void userCanChangeContentsForm(){
+	public void userCanSeeDifferentTypeOfFormBasedOnContentsSeletedDropdown(){
 		if(this.individualRun){
 			WebUtil.navigateToUrl(GlobalConstants.QR_GENERATOR_URL);
 			WebUtil.verifyElementVisible("//*[@id='header']//*[text()='QR Code Generator ']//*[text()='from the ZXing Project']");
@@ -159,7 +159,7 @@ class QrCodeGeneratorTests extends BaseTest {
 	}
 
     @Test(priority = 13)
-	public void userCanUploadQrCode(){
+	public void userCanUploadQrCodeImage(){
 		if (this.individualRun){
 			WebUtil.navigateToUrl(GlobalConstants.QR_DECODER_URL);
 			WebUtil.verifyElementVisible("//*[text()='QR code image: ']");
